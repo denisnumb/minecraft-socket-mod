@@ -1,36 +1,35 @@
 # minecraft-socket-mod
 
-Мод для MineCraft `1.20.1`, реализующий простой сокет-сервер для взамиодействия сторонних программ с игровым сервером.
+Mod for MineCraft, which implements a simple socket server for the interaction of third-party programs with the game server.
 
-Один из вариантов применения функционала — объединение чата MineCraft с каналом Discord-сервера в один общий чат.
+One of the options for using the functionality is to combine the MineCraft chat with the Discord server channel into one common chat.
 
 ![1](https://github.com/denisnumb/discord-minecraft-chat-socket/assets/61795655/33ec8918-5722-4b78-8e2a-f0da21900829)
 
-В директории `minecraft_mod` расположен исходный код мода, реализующего сокет-сервер, позволяющий обмениваться сообщениями с Discord-каналом.
+The `minecraft_mod` directory contains the source code of the mod that implements a socket server that allows you to exchange messages with a Discord channel.
 
-В директории `discord_bot` расположен Discord-бот, реализующий подключение к моду для обмена сообщениями.
+In the `discord_bot` directory there is a Discord bot that connects to the mod for messaging.
 
 ---
 
-# Использование
+# Usage
 
-1. [Скачайте][1] и установите **на сервер** последнюю версию мода, соответствующую необходимой версии игры. (Мод только для стороны сервера, на клиент устаналивать не нужно!)
-2. [Скачайте][2] и установите Python. Рекомендуемая версия не ниже `3.8`
-3. Установите библиотеку для работы с Discord:
+1. [Download][1] and install **on the server** the latest version of the mod that matches the required version of the game. (The mod is only for the server side, no need to install it on the client!)
+2. [Download][2] and install Python. Recommended version is not lower than `3.8`
+3. Install the library to work with Discord:
 ```cmd
 pip install py-cord
 ```
-4. Запустите сервер с установленным модом, чтобы в директории сервера сгенерировался конфигурационный файл мода
-5. [Создайте бота][3] и укажите все необходимые параметры в файле `discord_bot/config.py`
+4. Start the server with the mod installed so that the mod configuration file is generated in the server directory
+5. [Create a bot][3] and specify all the necessary parameters in the `discord_bot/config.py` file
 
-Если вы запускаете бота и сервер на одном устройстве, то конфигурационные данные IP-адресов можно не трогать (оставить `127.0.0.1`). 
+If you run the bot and the server on the same device, then the IP address configuration data can be left untouched (leave `127.0.0.1`). 
 
-В противном случае необходимо указать в конфигурации мода IP-адрес сервера, на котором запущен Discord-бот. А в `config.py` указать IP-адрес MineCraft-сервера.
+Otherwise, you need to specify in the mod configuration the IP address of the server on which the Discord bot is running.  And in `config.py` specify the IP address of the MineCraft server.
 
 ---
 
-Мод находится в стадии разработки и практически не тестировался, поэтому не исключен вариант возникновения различных багов.
-
+The mod is under development and has practically not been tested, so the possibility of various bugs cannot be ruled out.
 
 [1]: https://github.com/denisnumb/discord-minecraft-chat/releases
 [2]: https://www.python.org/downloads/
